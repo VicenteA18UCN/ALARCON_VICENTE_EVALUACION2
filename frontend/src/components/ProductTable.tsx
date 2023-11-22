@@ -12,10 +12,11 @@ import { Product } from "../app/models/Product";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Icon, IconButton } from "@mui/material";
+import { primaryGreen } from "../app/constants/colors";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: primaryGreen,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -70,7 +71,10 @@ const ClientsTable = ({ initialProduct, handleDelete, handleEdit }: Props) => {
                 {product.description}
               </StyledTableCell>
               <StyledTableCell align="center">
-                <img src={product.image}></img>
+                <img
+                  src={product.image}
+                  style={{ width: "60%", height: "60%" }}
+                ></img>
               </StyledTableCell>
               <StyledTableCell align="center">
                 <IconButton

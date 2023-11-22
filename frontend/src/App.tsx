@@ -128,7 +128,12 @@ const AdminPage = () => {
 
             <Grid container justifyContent="space-between" alignItems="center">
               <Grid item>
-                <Button variant="outlined" onClick={handleOpenCreateForm}>
+                <Button
+                  variant="outlined"
+                  onClick={handleOpenCreateForm}
+                  sx={{ m: 2 }}
+                  color="success"
+                >
                   Añadir producto
                 </Button>
               </Grid>
